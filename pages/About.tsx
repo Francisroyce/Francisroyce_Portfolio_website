@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import profilePic from "./Royce.jpg";
 const About = () => {
   return (
     <motion.div
@@ -22,7 +22,7 @@ const About = () => {
           className="md:col-span-1 flex justify-center"
         >
           <img
-            src="https://picsum.photos/seed/francis/400/400"
+            src={profilePic}
             alt="Okoronkwo Francis Ifeanyi"
             className="rounded-full h-64 w-64 object-cover shadow-lg border-4 border-secondary"
           />
