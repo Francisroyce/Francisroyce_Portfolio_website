@@ -1,4 +1,4 @@
-name: CI - Build & Push Docker Image
+name: CI - Build, Push Docker Image & Deploy to Render
 
 on:
   push:
@@ -22,11 +22,21 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build and push
+      - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest,${{ secrets.DOCKERHUB_USERNAME }}/portfolio:${{ github.sha }}
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:${{ github.sha }}
           cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/portfolio:buildcache
           cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/portfolio:buildcache,mode=max
+
+      - name: Trigger Render Deployment
+        run: |
+          curl -X POST "https://api.render.com/v1/services/<SERVICE_ID>/deploys" \
+          -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
+          -H "Accept: application/json" \
+          -H "Content-Type: application/json" \
+          -d '{"clearCache": true}'
