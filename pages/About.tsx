@@ -29,7 +29,7 @@ const About = () => {
         </motion.div>
         <div className="md:col-span-2 space-y-6 text-lg">
           <p>
-            As a dynamic and results-oriented Data Scientist and Analyst, I excel in leveraging advanced modeling techniques, predictive analytics, and data visualization to uncover meaningful patterns and drive strategic business outcomes.
+            I’m a data scientist and analyst who loves turning complex data into clear insights. I use advanced modeling, predictive analytics, and data visualization to uncover meaningful patterns and help organizations make smarter, more strategic decisions.
           </p>
           <p>
             With a proven track record in processing large-scale datasets, deploying scalable machine learning solutions, and translating complex data into actionable recommendations, I empower organizations to achieve sustainable growth.
