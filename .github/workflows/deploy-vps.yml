@@ -1,0 +1,23 @@
+name: CD - Deploy to VPS via SSH (Optional)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy over SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          port: ${{ secrets.SERVER_PORT || '22' }}
+          script: |
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME || 'portfolio' }}:latest
+            docker stop ${{ secrets.CONTAINER_NAME || 'portfolio' }} || true
+            docker rm ${{ secrets.CONTAINER_NAME || 'portfolio' }} || true
+            docker run -d -p 80:80 --name ${{ secrets.CONTAINER_NAME || 'portfolio' }} ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME || 'portfolio' }}:latest
