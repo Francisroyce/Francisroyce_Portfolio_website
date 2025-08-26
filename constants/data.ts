@@ -37,6 +37,19 @@ export const skillData: SkillCategory[] = [
     ],
   },
   {
+    category: 'Advanced Machine Learning & MLOps',
+    skills: [
+        { name: 'ML Model Development (Classification, Regression)', level: 95 },
+        { name: 'Large-Scale Data Preprocessing', level: 90 },
+        { name: 'Algorithm Optimization & Scalability', level: 90 },
+        { name: 'Cloud ML Deployment (AWS, Azure, GCP)', level: 85 },
+        { name: 'ML Pipelines (Docker, Kubernetes)', level: 80 },
+        { name: 'Hyperparameter Tuning & A/B Testing', level: 90 },
+        { name: 'Model Monitoring & Retraining', level: 85 },
+        { name: 'ML Documentation & Reporting', level: 95 },
+    ],
+  },
+  {
     category: 'Business Acumen',
     skills: [
       { name: 'KPI Monitoring', level: 95 },
@@ -50,6 +63,8 @@ export const skillData: SkillCategory[] = [
       { name: 'Leadership', level: 95 },
       { name: 'Effective Communication', level: 95 },
       { name: 'Mentorship', level: 90 },
+      { name: 'Technical Collaboration', level: 95 },
+      { name: 'Continuous Learning & Adaptability', level: 95 },
     ],
   },
 ];
