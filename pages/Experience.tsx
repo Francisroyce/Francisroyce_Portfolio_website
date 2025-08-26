@@ -72,7 +72,7 @@ const ExperienceItemCard = ({ item, index }: { item: ExperienceItem; index: numb
           </div>
         </motion.div>
       </div>
-    </>
+    </div>
   );
 };
 
