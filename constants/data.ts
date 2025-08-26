@@ -1,4 +1,3 @@
-
 import type { SkillCategory, Project, ExperienceItem, EducationItem } from '../types';
 
 export const skillData: SkillCategory[] = [
@@ -106,66 +105,93 @@ export const projectData: Project[] = [
 
 export const experienceData: ExperienceItem[] = [
     {
-    role: 'Lead Data Analyst',
-    company: 'SmartWave Tech',
-    period: '2023 – Present',
-    achievements: [
-      'Led data analysis initiatives, developing strategies that improved business decision-making.',
-      'Optimized data collection and processing workflows, increasing team efficiency by 25%.',
-      'Created Tableau and Power BI dashboards to track key performance indicators (KPIs).',
-      'Improved customer segmentation and predictive analytics capabilities.'
-    ],
-  },
-  {
-    role: 'Data Scientist',
+    role: 'Data Scientist / Online Educator',
     company: 'Educater (Online Education Platform)',
-    period: '2023 – Present',
+    period: '08/2023 – Present',
     achievements: [
-      'Developed data analytics curriculum and conducted training sessions.',
-      'Developed predictive models to personalize student learning paths.',
-      'Integrated AI solutions to automate grading and feedback systems.',
-      'Provided mentorship and guidance to students on real-world data analytics projects.'
+      'Conducted online education in data analytics and data science.',
+      'Taught Python and ML libraries.',
+      'Mentored students on real-world projects.',
+      'Stayed updated on AI/ML industry trends.'
+    ],
+  },
+   {
+    role: 'Lead Data Analyst / Data Scientist',
+    company: 'SmartWave Tech.',
+    period: '01/2021 – Present',
+    achievements: [
+      'Developed and implemented data-driven business strategies.',
+      'Built advanced ML models to improve predictive accuracy.',
+      'Applied statistical analysis to identify patterns in large datasets.',
+      'Led analysts in processing big data and generating insights.',
+      'Created dashboards (Power BI, Tableau) for KPI tracking.',
+      'Collaborated with teams to integrate ML into business solutions.',
     ],
   },
   {
-    role: 'Intern (Data Analyst)',
-    company: 'Ministry of Water Resources, Asaba',
-    period: '2021',
+    role: 'Volunteer Project Development (Data Analyst)',
+    company: 'Volunteer',
+    period: '2023 – 2024',
     achievements: [
-      'Performed comprehensive data analysis to improve policy formation and water management.',
-      'Developed machine learning models to forecast water quality measurements.',
-      'Assisted in data collection and cleaning for large-scale environmental studies.',
+      'Conducted research and analysis for local development projects.',
+      'Built dashboards to track performance and assess impact.',
+      'Delivered insights for policy decisions and resource allocation.',
+    ],
+  },
+  {
+    role: 'Intern / Water Engineer',
+    company: 'Ministry of Water Resources, Asaba',
+    period: '04/2021 – 11/2021',
+    achievements: [
+      'Performed comprehensive data analysis to improve water resource management.',
+      'Developed ML models to forecast water quality.',
+      'Applied machine learning to assess water quality/resources.',
+      'Created dashboards for strategic planning.',
+      'Ensured responsible use of ML models (bias/fairness).',
     ],
   },
   {
     role: 'Junior Data Scientist',
     company: 'Pointplus Computer Institute',
-    period: '2018 – 2019',
+    period: '01/2018 – 06/2019',
     achievements: [
-      'Supported data-driven training programs by preparing datasets and examples.',
-      'Performed exploratory data analysis (EDA) to uncover insights for curriculum development.',
-      'Assisted students in developing data-driven projects.'
+      'Implemented predictive algorithms for forecasting.',
+      'Conducted model evaluation to ensure performance and reliability.',
+      'Led training sessions on SQL, Power BI, Tableau, Excel, and Python.',
+      'Developed classification, regression, clustering, computer vision, NLP, and voice recognition projects.',
     ],
   },
 ];
 
 export const educationData: EducationItem[] = [
   {
-    degree: 'B.Eng. in Agricultural & Bioresources Engineering',
-    institution: 'University of Nigeria, Nsukka',
-    period: '2016 – 2022',
-    logoUrl: 'https://picsum.photos/seed/unilogo/100/100',
-  },
-  {
-    degree: 'Certificate in Data Science and Analytics',
-    institution: 'Simplilearn Skillup',
-    period: 'Expected Feb 2025',
+    degree: 'Certificate in Data Analytics Projects (Code: 7920229)',
+    institution: 'Simplilearn SkillUP',
+    period: 'Completed Feb 18, 2025',
     logoUrl: 'https://picsum.photos/seed/simplilearn/100/100',
   },
   {
-    degree: 'Certificate in Computer and Information Technology',
-    institution: 'Pointplus ICT Institute',
-    period: 'Completed',
+    degree: 'Certificate in Introduction to Data Analytics (Code: 7917942)',
+    institution: 'Simplilearn SkillUP',
+    period: 'Completed Feb 17, 2025',
+    logoUrl: 'https://picsum.photos/seed/simplilearn/100/100',
+  },
+  {
+    degree: 'B.Eng. in Agricultural & Bioresources Engineering (Upper Division)',
+    institution: 'University of Nigeria, Nsukka',
+    period: 'Result Dated: April 12, 2023',
+    logoUrl: 'https://picsum.photos/seed/unilogo/100/100',
+  },
+  {
+    degree: 'Diploma in Computer and Information Technology (CITT)',
+    institution: 'POINTPLUS ICT Training and Development Center',
+    period: 'Completed Jan 31, 2014',
+    logoUrl: 'https://picsum.photos/seed/pointplus/100/100',
+  },
+   {
+    degree: 'Certificate in Computer and Information Technology (CITT)',
+    institution: 'POINTPLUS ICT Training and Development Center',
+    period: 'Completed Jan 31, 2014',
     logoUrl: 'https://picsum.photos/seed/pointplus/100/100',
   },
 ];
