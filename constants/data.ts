@@ -70,6 +70,14 @@ export const skillData: SkillCategory[] = [
 
 export const projectData: Project[] = [
   {
+    title: '🍷 Wine Quality Prediction System',
+    description: 'A machine learning–powered web application that predicts the quality of wine based on its physicochemical properties.',
+    technologies: ['Python', 'Flask', 'Scikit-learn', 'Bootstrap', 'Render'],
+    imageUrl: 'https://picsum.photos/seed/winequality/500/300',
+    liveUrl: 'https://vinai-3apo.onrender.com',
+    repoUrl: 'https://github.com/Francisroyce?tab=repositories',
+  },
+  {
     title: 'Grade Predictor',
     description: 'A machine learning model forecasting academic performance using regression analysis to help students and educators identify potential risks.',
     technologies: ['Python', 'Scikit-learn', 'Pandas', 'Flask'],
