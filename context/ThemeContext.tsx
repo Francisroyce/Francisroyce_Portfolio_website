@@ -14,7 +14,8 @@ interface ThemeProviderProps {
   children: ReactNode;
 }
 
-export const ThemeProvider = ({ children }: ThemeProviderProps) => {
+// FIX: Explicitly type ThemeProvider as a React.FC to resolve typing issues with the 'children' prop.
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>('light');
 
   useEffect(() => {
