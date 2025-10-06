@@ -17,5 +17,8 @@ FROM nginx:alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Copy built assets
 COPY --from=builder /app/dist /usr/share/nginx/html
+# ✅ Copy Google Search Console verification file
+COPY googlea01b76514aabe550.html /usr/share/nginx/html/
+
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
