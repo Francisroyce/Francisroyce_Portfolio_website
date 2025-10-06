@@ -14,8 +14,13 @@ const CardContent = ({ item }: { item: ExperienceItem }) => (
     </>
 );
 
+interface ExperienceItemCardProps {
+  item: ExperienceItem;
+  index: number;
+}
 
-const ExperienceItemCard = ({ item, index }: { item: ExperienceItem; index: number }) => {
+// FIX: Explicitly type ExperienceItemCard as React.FC to resolve typing issues with the 'key' prop.
+const ExperienceItemCard: React.FC<ExperienceItemCardProps> = ({ item, index }) => {
   const isLeft = index % 2 !== 0;
 
   // Animation variants for desktop

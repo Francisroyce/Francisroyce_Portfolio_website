@@ -4,7 +4,12 @@ import { motion } from 'framer-motion';
 import { skillData } from '../constants/data';
 import type { Skill } from '../types';
 
-const SkillBar = ({ skill }: { skill: Skill }) => (
+interface SkillBarProps {
+  skill: Skill;
+}
+
+// FIX: Explicitly type SkillBar as React.FC to resolve typing issues with the 'key' prop.
+const SkillBar: React.FC<SkillBarProps> = ({ skill }) => (
     <div className="mb-4">
         <div className="flex justify-between mb-1">
             <span className="text-base font-medium text-gray-700 dark:text-gray-300">{skill.name}</span>
