@@ -1,0 +1,8 @@
+{
+  "root": "build/",
+  "clean_urls": false,
+  "routes": {
+    "/googlea01b76514aabe550.html": "googlea01b76514aabe550.html",
+    "/**": "index.html"
+  }
+}
